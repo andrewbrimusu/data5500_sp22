@@ -5,6 +5,7 @@ import time
 # in binary search tree
 
 from print_tree import *
+from tree_util import *
 
 # A Binary Tree Node
 
@@ -97,7 +98,7 @@ def deleteNode(root, key):
 		# Node with two children: 
 		# Get the inorder successor
 		# (smallest in the right subtree)
-		temp = minValueNode(root.right)
+		temp = findMinRec(root.right)
 
 		# Copy the inorder successor's 
 		# content to this node
